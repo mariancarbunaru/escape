@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Escape Room app</title>
+		<link rel="stylesheet" href="webgl.css" type="text/css">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+		<style>
+		body {
+		  font-family: "Sofia", sans-serif;
+		}
+		</style>
+	</head>
+	<body>
+
+		<div class="container">
+			<canvas id="glCanvas"></canvas>
+
+			<div id="controlsOverlay">
+    			<div>Front: W <span id="controls"><span></div>
+    			<div>Left: A  Right: D <span id="controls"><span></div>
+    			<div>Back: S <span id="controls"><span></div>
+    			<div>Turn Left: Left arrow <span id="controls"><span></div>
+    			<div>Turn Right: Right arrow <span id="controls"><span></div>
+    			<div>Up: Up arrow <span id="controls"><span></div>
+    			<div>Down: Down arrow <span id="controls"><span></div>
+    			<div>Get object: G <span id="controls"><span></div>
+    			<div>Drop object: L <span id="controls"><span></div>
+    			<div>Show controls: O <span id="controls"><span></div>
+    			<div>Hide controls: ESC <span id="controls"><span></div>	
+    		</div>
+    		<div id="storyOverlay">
+    			<h1>Povestea jocului</h1>
+    			<p>Din motive necunoscute lui, o forta suprema rau intentionata Q, il rapeste pe Mr. M si il inchide intr-un 
+    			castel pentru a-si masura cu acesta puterea mintii.</p>
+    			<p>Fara a primi prea multe indicii de la Q , pentru a se salva Mr. M trebuie sa rezolve o serie de puzzle-uri, ghicitori, situatii limita, dovedindu-si astfel superioritate.</p>
+    			<p>E randul tau sa fii Mr. M! Ce zici?</p>
+    			<p style="color:red ;
+    					text-align: left; 
+    					font-family: monospace; 
+    					font-size: 20px;
+    					position: absolute;
+    					bottom: 10px;
+    					left: 10px;
+    					"> 
+    				Apasa ESC pentru a reveni la meniul anterior</p>
+    		</div>
+            <div id="loadingOverlay">
+                <p> Loading ... Please wait :)</p>
+                <div id="loader"></div>
+            </div>
+
+    	</div>
+		<script src="http://localhost:8080/surse/v5/proiect.js" type="module"></script>
+		<!-- <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script> -->
+
+	</body>
+</html>
