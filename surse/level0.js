@@ -1,4 +1,4 @@
-import * as THREE from 'http://localhost:8080/resources/threejs/r122/build/three.module.js';
+import * as THREE from 'resources/threejs/r122/build/three.module.js';
 import {degToRad, 
 		clearThree, 
 		resizeRendererToDisplaySize, 
@@ -6,10 +6,10 @@ import {degToRad,
 		playSound, 
 		dontShowOverlay, 
 		showOverlay
-	} from 'http://localhost:8080/surse/v5/utils.js';
-import { renderer, camera, scene, listener} from 'http://localhost:8080/surse/v5/proiect.js';
-import { playLevel1 } from 'http://localhost:8080/surse/v5/level1.js';
-import {player, pathSounds, l0Texture, l0Buttons, l0StartButton, l0StoryButton, l0Picture1, l0Picture2} from 'http://localhost:8080/surse/v5/header.js';
+	} from 'surse/utils.js';
+import { renderer, camera, scene, listener} from 'surse/proiect.js';
+//import { playLevel1 } from 'http://localhost:8080/surse/v5/level1.js';
+import {player, pathSounds, l0Texture, l0Buttons, l0StartButton, l0StoryButton, l0Picture1, l0Picture2} from 'surse/header.js';
 
 'use strict'
 
@@ -118,7 +118,7 @@ function playLevel0() {
   clickStory.push(c2);
   storyButton.add(c2);
 
-  createText();
+  //createText();
   animate();
 
   function animate(time) {
@@ -170,27 +170,27 @@ function playLevel0() {
   }
 
   //text
-    function createText() {
-      const loader = new THREE.FontLoader();
+//     function createText() {
+//       const loader = new THREE.FontLoader();
 
-      loader.load( 'http://localhost:8080/resources/threejs/fonts/helvetiker_regular.typeface.json', function ( font ) {
-        const geometry = new THREE.TextGeometry( 'E V A D A R E A', {
-          font: font,
-          size: 1.5,
-          height: 0.02,
-          curveSegments: 25,
-          bevelEnabled: true,
-          bevelThickness: 0.04,
-          bevelSize: 0.1,
-          bevelSegments: 5,
-        } );
-        const material = new THREE.MeshPhongMaterial({color: 0x660000});
-        const mytext = new THREE.Mesh(geometry, material);
-        mytext.position.set(-7, 2, 0.05);
-        mytext.rotateX(degToRad(45));
-        scene.add(mytext);
-      } );
-    }
+//       loader.load( 'http://localhost:8080/resources/threejs/fonts/helvetiker_regular.typeface.json', function ( font ) {
+//         const geometry = new THREE.TextGeometry( 'E V A D A R E A', {
+//           font: font,
+//           size: 1.5,
+//           height: 0.02,
+//           curveSegments: 25,
+//           bevelEnabled: true,
+//           bevelThickness: 0.04,
+//           bevelSize: 0.1,
+//           bevelSegments: 5,
+//         } );
+//         const material = new THREE.MeshPhongMaterial({color: 0x660000});
+//         const mytext = new THREE.Mesh(geometry, material);
+//         mytext.position.set(-7, 2, 0.05);
+//         mytext.rotateX(degToRad(45));
+//         scene.add(mytext);
+//       } );
+//     }
 
   function onMouseDown(event) {
     mouse.x = ( event.clientX / renderer.domElement.width ) * 2 - 1;
