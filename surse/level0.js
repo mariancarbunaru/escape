@@ -9,7 +9,7 @@ import {degToRad,
 	} from 'surse/utils.js';
 import { renderer, camera, scene, listener} from 'surse/proiect.js';
 //import { playLevel1 } from 'http://localhost:8080/surse/v5/level1.js';
-import {player, pathSounds, l0Texture, l0Buttons, l0StartButton, l0StoryButton, l0Picture1, l0Picture2} from 'surse/header.js';
+import {player, l0Texture, l0Buttons, l0StartButton, l0StoryButton, l0Picture1, l0Picture2} from 'surse/header.js';
 
 'use strict'
 
@@ -50,8 +50,8 @@ function playLevel0() {
   const mouse = new THREE.Vector2();
 
   // create a global audio source
-  const ambient0sound = new THREE.Audio( listener );
-  setSounds(ambient0sound, pathSounds.ambient0);
+//   const ambient0sound = new THREE.Audio( listener );
+//   setSounds(ambient0sound, pathSounds.ambient0);
 
   const loader = new THREE.TextureLoader(loadingManager);
   scene.background = loader.load(l0Texture);
@@ -145,7 +145,7 @@ function playLevel0() {
     if (click) {
       level0Over = true;
       click = false;
-      ambient0sound.stop(); 
+//       ambient0sound.stop(); 
       document.body.removeEventListener( 'mousedown', onMouseDown );
       document.body.removeEventListener( 'keydown', onKeyDown, false );
     	alert("Let's go to level 1 now!");
